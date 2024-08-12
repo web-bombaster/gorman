@@ -1,0 +1,50 @@
+.header-top-contact {
+    z-index:2;
+    position: relative;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 10px;
+    padding-bottom: 15px;
+    line-height: 1;
+
+    span {
+        position: relative;
+        &::before {
+            content: '';
+            width: 1.4em;
+            height: 1.4em;
+            display: inline-block;
+            position: relative;
+            background-position: left center;
+            background-size: cover;
+            top: 4px;
+            margin-right: 5px;
+        }
+    }
+
+    a {
+        color: #fff;
+    }
+
+    .adres {
+        span {
+            &::before {
+                background-image: url('../img/location-pin.svg');
+            }
+        }
+        @media screen and (max-width: $break_sm) {
+            text-align: center;
+        }
+    }
+    .tel {
+        text-align: right;
+        span {
+            &::before {
+                background-image: url('../img/phone-call.svg');
+            }
+        }
+        @media screen and (max-width: $break_sm) {
+            text-align: center;
+        }
+    }
+}

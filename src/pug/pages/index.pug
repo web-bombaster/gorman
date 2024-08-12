@@ -1,0 +1,139 @@
+- var pageType = 'home';
+//- Для pageType указать тип страницы. Варианты:
+	home - главная страница
+	content-vnutr - простая внутренняя страница
+	content-docs
+	content-posts - страница с постами в виде простого списка как на Мегагруппе
+	content-gallery - gallery
+	content-news - news
+	content-table - table
+	content-katalog - страница каталога
+	content-tovar - страница товара
+
+doctype html
+html(lang="ru-RU")
+	include ../includes/head
+	body#top
+
+		//- include ../includes/preloader
+
+		include ../includes/header
+		include ../includes/menu-adaptiv
+		if pageType === 'home'
+			include ../includes/bigslider
+			include ../includes/section-about
+			include ../includes/section-price
+			include ../includes/section-advantages
+			include ../includes/section-portfolio
+			include ../includes/otzyvy
+			include ../includes/section-faq
+			//- include ../includes/section-katalog
+			//- include ../includes/section-price-table
+
+		//- content-vnutr - простая внутренняя страница
+		if pageType === 'content-vnutr'
+			.wrapper
+				include ../includes/breadcrumbs
+				main
+					include ../includes/content-vnutr
+
+		//- content-docs
+		if pageType === 'content-docs'
+			.wrapper
+				include ../includes/breadcrumbs
+				main
+					include ../includes/content-docs
+
+		//- content-posts
+		if pageType === 'content-posts'
+			.wrapper
+				include ../includes/breadcrumbs
+				main
+					include ../includes/content-posts
+
+		//- content-gallery
+		if pageType === 'content-gallery'
+			.wrapper
+				include ../includes/breadcrumbs
+				main
+					include ../includes/content-gallery
+
+		//- content-news
+		if pageType === 'content-news'
+			.wrapper
+				include ../includes/breadcrumbs
+				main
+					include ../includes/content-news
+
+		//- content-table
+		if pageType === 'content-table'
+			.wrapper
+				include ../includes/breadcrumbs
+				main
+					include ../includes/content-table
+
+		//- tovar
+		if pageType === 'content-tovar'
+			.wrapper
+				include ../includes/breadcrumbs
+				main
+					include ../includes/content-katalog-item
+
+		//- content-katalog
+		if pageType === 'content-katalog'
+			.wrapper
+				include ../includes/breadcrumbs
+				main
+					include ../includes/content-katalog
+
+		//- include ../includes/section-problems
+		//- include ../includes/section-advantages
+		//- include ../includes/section-rukovoditel
+
+		//-include ../includes/section-contacts
+		include ../includes/section-hero
+		include ../includes/section-contacts2
+		include ../includes/footer
+
+		//- .container
+			//- .wrapper
+			//- include ../includes/section-contacts
+			//-.wrapper
+				include ../includes/breadcrumbs
+			//-main
+				include ../includes/content
+			//- .wrapper
+				.row
+					main
+						include ../includes/content
+					aside.aside-left
+						include ../includes/aside-left
+					aside.aside-right
+						include ../includes/aside-right
+
+			//- .wrapper
+
+		//- .wrapper
+			//- include ../includes/breadcrumbs
+			main
+				include ../includes/content
+				//- include ../includes/pagination
+		//- include ../includes/section-zvonite
+		//- include ../includes/section-bottom
+		//- include ../includes/section-action
+		//- include ../includes/section-services
+		//- include ../includes/section-portfolio
+		//- include ../includes/section-shema
+		//- include ../includes/section-contacts
+		//- include ../includes/top-section
+		//- include ../includes/advantage
+		//- include ../includes/action
+		//- include ../includes/ceny
+		//- include ../includes/otzyvy
+
+
+		include ../includes/help-panel
+		include ../includes/hidden
+
+		//- Подключаем скрипты и стили
+		include ../includes/sourse

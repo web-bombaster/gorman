@@ -1,0 +1,17 @@
+.contacts {
+    text-align: center;
+    @include pix-to-rem(24px);
+        @media screen and (max-width: $break_sm) {
+            @include pix-to-rem(18px);
+        }
+    // @include pix-to-rem(16px);
+    // @include pix-to-rem(18px);
+}
+
+.map {
+    width: 100%;
+    height: 465px;
+    background-color: #FFFEC7;
+    margin-top: 45px;
+    border: 4px solid $color-akcent;
+}

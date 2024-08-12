@@ -1,0 +1,263 @@
+/* ---------------------------------------------- /*
+ * Стили меню
+/* ---------------------------------------------- */
+
+.header-menu {
+	background-color: darken($color-akcent, 10%);
+	// text-align: center;
+	position: relative;
+	z-index: 1000 !important;
+
+	@media screen and (max-width: $break_sm) {
+		width: 100%;
+	}
+
+	.wrapper {
+		padding: 0 15px;
+
+		@media screen and (max-width: 768px) {
+			padding: 0;
+		}
+	}
+
+	.container {
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+}
+
+nav,
+.tgnav {
+	z-index: 1000;
+}
+
+.tgnav {
+	display: block;
+	margin: 0;
+	padding: 7px 0;
+	z-index: 999;
+	font-size: 0;
+
+	@media (max-width: $break_sm) {
+		display: none;
+		background-color: $color-akcent3;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		text-align: center;
+	}
+
+	& li {
+		display: inline-block;
+		box-sizing: border-box;
+		z-index: 1001;
+
+		&:before {
+			content: none !important;
+		}
+
+		// background-color: rgba(0, 0, 0, 0.1);
+
+		@media (max-width: $break_sm) {
+			display: block;
+		}
+
+		&.active > a {
+			color: darken($color-akcent, 15%);
+			border-bottom: 1px solid darken($color-akcent, 15%);
+			box-sizing: border-box;
+
+			@media (max-width: $break_sm) {
+				color: $color-akcent;
+			}
+		}
+
+		& a {
+			display: inline-block;
+			padding: 10px 15px;
+			text-decoration: none;
+			// margin: 15px 15px;
+			padding: 8px 15px;
+			box-sizing: border-box;
+			@include pix-to-rem(15px);
+			line-height: 20px;
+			color: #fff;
+			font-weight: 600;
+			outline: 0;
+			cursor: pointer;
+
+			@media (max-width: $break_sm) {
+				padding: 10px 15px;
+				margin: 0;
+				border-bottom: 1px solid lighten($color-default, 65%);
+				// color: $color-default;
+			}
+
+			:hover {
+				color: $color-akcent;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.dropdown {
+		&-toggle {
+			position: relative;
+			padding-right: 15px;
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 0px;
+				margin-top: -2px;
+				width: 0;
+				height: 0;
+				border-width: 5px;
+				border-style: solid;
+				border-color: #fff transparent transparent transparent;
+
+				@media (max-width: $break_sm) {
+					border-color: #fff transparent transparent transparent;
+				}
+			}
+
+			&.open {
+				// background-color: lighten($color-default, 77%);
+			}
+		}
+
+		&-menu {
+			display: none;
+			position: absolute;
+			z-index: 1002;
+			left: 0;
+			width: 100%;
+			//border: 1px solid lighten($color-default, 65%);
+			box-sizing: border-box;
+			text-align: center;
+
+			@media (max-width: $break_sm) {
+				position: relative;
+			}
+
+			li {
+				margin: 0;
+
+				a {
+					margin: 0;
+					// color: $color-default;
+				}
+			}
+
+			.dropdown-menu {
+				position: relative;
+			}
+
+			&::before {
+				content: " ";
+				display: table;
+			}
+
+			&::after {
+				content: " ";
+				display: table;
+			}
+
+			&.open {
+				display: block;
+			}
+
+			ul {
+				display: block;
+				// max-width: 300px;
+				margin: 0px auto;
+				padding: 10px;
+				background-color: lighten($color-akcent, 5%);
+
+				@media screen and (max-width: $break_sm) {
+					// background-color: rgba($color-akcent, .5);
+					//background-color: lighten($color-akcent, 7%);
+				}
+
+				ul {
+					// background-color: rgba($color-akcent, .8);
+					background-color: lighten($color-default, 72%);
+				}
+			}
+
+			li {
+				// display: block;
+				display: block;
+			}
+
+			a {
+				padding: 10px 15px;
+				border-bottom: 1px solid lighten($color-default, 65%);
+				// color: #fff;
+			}
+
+			a.dropdown-toggle {
+				padding-right: 25px;
+			}
+		}
+	}
+}
+
+.touch-menu__box {
+	@media screen and (max-width: 768px) {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+}
+
+.touch-menu {
+	display: none;
+	position: relative;
+	z-index: 1000 !important;
+	margin: 0 auto;
+	padding: 8px 40px 6px 15px;
+
+	background-color: transparent;
+	border: 1px solid #fff;
+	border-radius: 10px;
+
+	text-align: center;
+	color: #fff;
+	font-weight: 600;
+	line-height: 20px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	cursor: pointer;
+	outline: 0;
+
+	&::before {
+		position: absolute;
+		content: "";
+		top: 50%;
+		margin-top: -8px;
+		right: 15px;
+		width: 18px;
+		height: 14px;
+		box-sizing: border-box;
+		border-top: 2px solid #fff;
+		border-bottom: 2px solid #fff;
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		top: 50%;
+		margin-top: -8px;
+		right: 15px;
+		width: 18px;
+		height: 8px;
+		box-sizing: border-box;
+		border-bottom: 2px solid #fff;
+	}
+
+	@media (max-width: $break_sm) {
+		display: block;
+	}
+}

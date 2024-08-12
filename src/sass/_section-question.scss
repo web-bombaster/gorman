@@ -1,0 +1,60 @@
+.question {
+	position: relative;
+	background-image: url('./../img/main4.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-color: $color-akcent;
+	color: #fff;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($color-akcent, .65);
+	}
+
+	.wrapper {
+		position: relative;
+		max-width: 800px;
+	}
+
+	.text-center {
+		@include pix-to-rem(20px);
+		display: block;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media screen and (max-width: $break_md) {
+			@include pix-to-rem(20px);
+		}
+
+		@media screen and (max-width: $break_sm) {
+			font-size: 16px;
+		}
+	}
+
+	.btn {
+		color: #fff;
+		border-color: #fff;
+		// 	@include pix-to-rem(36px);
+		// 	border: 2px solid;
+		// 	padding: 20px 45px;
+
+		// 	@media screen and (max-width: $break_md) {
+		// 		@include pix-to-rem(28px);
+		// 	}
+
+		// 	@media screen and (max-width: $break_sm) {
+		// 		@include pix-to-rem(20px);
+		// 		padding: 15px 35px;
+		// 	}
+
+		// 	&:hover {
+		// 		background-color: rgba(#000, .2);
+		// 	}
+	}
+}

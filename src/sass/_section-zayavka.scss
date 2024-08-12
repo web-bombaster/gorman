@@ -1,0 +1,41 @@
+.zayavka {
+	background-image: url('./../img/bg-zayavka.jpg');
+	background-size: cover;
+	position: relative;
+	z-index: 0;
+
+	&:after {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $color-akcent3;
+		z-index: 0;
+		opacity: .9;
+	}
+
+	.wrapper {
+		z-index: 1;
+		position: relative;
+	}
+
+	form {
+		background: #fff;
+	}
+
+	.tel {
+		display: block;
+		@include pix-to-rem(24px);
+		font-weight: normal;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		transition: .25s;
+
+		&:hover {
+			color: $color-akcent;
+			transition: .25s;
+		}
+	}
+}

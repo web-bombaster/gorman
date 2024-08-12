@@ -1,0 +1,24 @@
+//- p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Пор своего на берегу рыбного рекламных, языкового рукописи единственное по всей вдали решила деревни последний свой, курсивных речью. Однажды коварных дороге ты, своих предупредила выйти. Вдали последний но агентство страну его заманивший снова пустился за ему? Заголовок злых обеспечивает сбить однажды но.
+
+form#zayavka3.form.ajax_form.af_example.form-top.zayavka
+	h3.text-center Оставить заявку
+
+
+	.before.name
+		input.jsFormText(name='name', type='text', value='', placeholder="Ваше имя", required="")
+
+	.before.mail
+		input.jsFormMail(name='mail', type='email', value='', placeholder="Ваш Email", required="")
+
+	.before.comment
+		textarea.jsFormText(name="comment", placeholder="Ваше сообщение")
+
+	//- .before
+	label.control-label.polytic(for='zayavka3-polytic')
+		input#zayavka3-polytic.polytic.jsFormCheckbox(name='soglasie', type='checkbox', value='yes', required="")
+
+		| Даю согласие на обработку моих персональных данных на условиях, указанных в
+		a(href='#') Политике конфиденциальности
+
+	//- button.btn.submit(name='submit', type='submit', disabled) Отправить
+	button.btn.submit(name='submit', type='button') Отправить

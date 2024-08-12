@@ -1,0 +1,38 @@
+.gallery-slider {
+    background-color: #f1f1f1;
+}
+
+.gallery {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    @include row-flex();
+
+    p {
+        display: none;
+    }
+
+    .gallery-item {
+        list-style-type: none;
+        margin: 15px;
+        box-sizing: border-box;
+        @include col();
+        @include size(2);
+        @include size-md(3);
+        @include size-sm(4);
+        @include size-xs(6);
+    }
+
+    a {
+        display: block;
+        line-height: 1;
+        outline: none;
+    }
+
+    .imggallery {
+        border: 2px solid $color-akcent;
+        padding: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

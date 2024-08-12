@@ -1,0 +1,126 @@
+.contacts {
+	text-align: center;
+	padding-top: 75px;
+	padding-bottom: 60px;
+	background-color: $color-akcent;
+	// background-color: lighten($color-akcent6, 3%);
+	color: #fff;
+
+	&-wrapper {
+		@include row-flex();
+		margin-top: 45px;
+	}
+
+	&-box {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		// align-items: flex-start;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	&-info {
+		//flex-basis: 70%;
+		// max-width: 80%;
+
+		@media screen and (max-width: $break_sm) {
+			max-width: 100%;
+			margin-bottom: 25px;
+		}
+
+		&__item {
+			position: relative;
+			@include col();
+			@include size(6);
+			@include size-sm(12);
+			position: relative;
+			text-align: left;
+			min-height: 30px;
+			// margin-top: 10px;
+			margin-bottom: 20px;
+			box-sizing: border-box;
+			padding: 4px 0px 0px 30px;
+			//padding-left: 40px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 5px;
+				left: 0;
+
+				width: 20px;
+				height: 20px;
+				// border-radius: 50%;
+				// background-color: #fff;
+
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				//transform: translateY(-50%);
+			}
+
+			&.phone {
+				&:before {
+					background-image: url('./../img/icons/phone-white.svg');
+				}
+			}
+
+			&.address {
+				&:before {
+					background-image: url('./../img/icons/marker-white.svg');
+				}
+			}
+
+			&.mail {
+				&:before {
+					background-image: url('./../img/icons/mail-white.svg');
+				}
+			}
+
+			&.clock {
+				&:before {
+					background-image: url('./../img/icons/clock.svg');
+				}
+			}
+		}
+	}
+
+	&-socbtn {
+		//flex-basis: 30%;
+		max-width: 20%;
+		text-align: right;
+		box-sizing: border-box;
+		padding-left: 15px;
+
+		@media screen and (max-width: $break_sm) {
+			max-width: 100%;
+			padding-left: 0;
+		}
+
+		&__item {
+			display: inline-block;
+			box-sizing: border-box;
+			margin: 0 7px;
+
+			@media screen and (max-width: $break_sm) {
+				&:first-child {
+					margin-left: 0;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			img {
+				display: block;
+				height: 22px;
+				max-width: 100%;
+			}
+		}
+	}
+}

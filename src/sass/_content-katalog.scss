@@ -1,0 +1,114 @@
+.katalog {
+	// background-color: $color-akcent3;
+	text-align: center;
+
+	.wrapper {
+		& > .btn {
+			background-color: $color-akcent;
+			color: #fff;
+		}
+	}
+
+	&-box {
+		@include row-flex();
+		margin-top: 25px;
+		margin-bottom: 25px;
+		// justify-content: center;
+	}
+
+	&-item {
+		@include col();
+		@include size(3);
+		@include size-md(4);
+		@include size-sm(6);
+		@include size-xs(12);
+		background-color: $color-akcent3;
+		padding: 10px;
+		box-sizing: border-box;
+		//border: 1px solid $color-akcent;
+		margin-bottom: 30px;
+		line-height: 1.25;
+		// display: flex;
+		// flex-direction: column;
+		transition: .5s;
+		text-align: center;
+
+		&:hover {
+			background-color: lighten($color-akcent, 45%);
+			transition: .5s;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		&__img {
+			display: block;
+			width: 100%;
+			margin-bottom: 10px;
+
+			img {
+				display: block;
+			}
+		}
+
+		&__title {
+			//text-transform: uppercase;
+			@include pix-to-rem(20px);
+			margin-bottom: 10px;
+			font-weight: 100;
+			color: $color-default;
+			font-family: $font-akcent;
+		}
+
+		&__category {
+			margin-bottom: 10px;
+			@include pix-to-rem(12px);
+		}
+
+		&__box {
+			margin-top: auto;
+			display: flex;
+			justify-content: space-between;
+			//justify-content: space-between;
+			align-items: center;
+			overflow: hidden;
+			margin-bottom: 15px;
+		}
+
+		&__price {
+			@include pix-to-rem(20px);
+			font-weight: bold;
+			color: $color-default;
+			display: block;
+			flex-grow: 1;
+
+			&.old {
+				color: $color-default;
+				text-decoration: line-through;
+				display: inline-block;
+				margin-bottom: 0;
+				flex-grow: 1;
+			}
+
+			&new {
+				display: inline-block;
+				font-weight: bold;
+				@include pix-to-rem(20px);
+				color: $color-akcent;
+				flex-grow: 1;
+			}
+		}
+
+		&__readmore {
+		}
+
+		.btn {
+			padding: 12px 20px;
+			margin-top: 0;
+			background-color: $color-default;
+			@include pix-to-rem(14px);
+			color: #fff;
+		}
+	}
+}

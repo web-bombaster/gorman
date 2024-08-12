@@ -1,0 +1,48 @@
+.request {
+	position: relative;
+	background-image: url('./../img/bg-zayavka.jpg');
+	background-size: cover;
+	background-color: $color-akcent;
+	color: $color-akcent6;
+	text-align: center;
+	padding-top: 120px;
+	padding-bottom: 120px;
+	z-index: 0;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		background-color: rgba($color-akcent, .75);
+	}
+
+	.wrapper {
+		position: relative;
+		z-index: 2;
+	}
+
+	.section-header {
+		text-transform: none;
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+		color: $color-akcent6;
+		font-weight: normal;
+	}
+
+	p {
+		@include pix-to-rem(30px);
+		line-height: 1.25;
+		max-width: 700px;
+		margin: 10px auto;
+	}
+
+	.btn {
+		color: $color-akcent6;
+		border-color: $color-akcent6;
+	}
+}

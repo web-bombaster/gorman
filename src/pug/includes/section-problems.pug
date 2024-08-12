@@ -1,0 +1,56 @@
+section#problems.problems
+	//- .wrapper
+	.wrapper
+		//- h2.section-header Астрологические консультации
+		.row
+			.problems-question
+				ul
+					li возникает ощущение, что занимаетесь не своим делом?
+					li сложные отношения с супругом, начальником, коллективом?
+					li задумываетесь о смене работы, партнера, места жительства?
+					li не получается создать семью, постоянно притягиваются «не те» партнеры?
+					li хотите узнать и раскрыть свои врожденные таланты и способности?
+					li не можете определиться с датой свадьбы, открытия своего дела, зачатия ребенка?
+					li Вы определились и готовы изменить свою жизнь к лучшему?
+				img(src="./../../img/strelka-01.jpg", alt="")
+				p Профессиональный астролог поможет!
+			.problems-form
+
+
+				form#zayavka.form
+					h3.text-center Записаться на консультацию к астрологу
+					p Отправьте заявку на консультацию. Мы свяжемся с вами и назничим удобное время консультации.
+
+					//- label.control-label(for='af_name')
+						| Ваше имя
+					.before.name
+						input.jsFormText(name='name', type='text', value='', placeholder="Ваше имя", required="")
+						//- span.error.error-name Поле должно быть заполнено
+
+					//- label.control-label(for='af_mail')
+					//- 	| Ваш e-mail
+					//- .before.mail
+						input.jsFormMail(name='mail', type='email', value='', placeholder="Ваш Email", required="")
+						//- span.error.error-mail
+
+					//- label.control-label(for='af_phone')
+						| Котактный телефон
+					.before.phone
+						input#af_phone.jsFormPhone(name='phone', type='tel', value='', placeholder="Контактный телефон", required="")
+						//- span.error.error-phone
+
+					//- label.control-label(for='af_text')
+						| Ваше сообщение
+						span.error_text
+					.before.comment
+						textarea.jsFormText(name="comment", placeholder="Ваше сообщение")
+
+					//- .before
+					label.control-label.polytic(for='zayavka2-polytic')
+						input#zayavka2-polytic.polytic.jsFormCheckbox(name='soglasie', type='checkbox', value='yes', required="")
+						//- span.error.error-polytic
+						| Даю согласие на обработку моих персональных данных на условиях, указанных в
+						a(href='#') Политике конфиденциальности
+
+					//- button.btn.submit(name='submit', type='submit', disabled) Отправить
+					button.btn.submit(name='submit', type='button') Отправить

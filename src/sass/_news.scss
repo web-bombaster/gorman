@@ -1,0 +1,99 @@
+.news {
+	position: relative;
+	text-align: center;
+	//box-shadow: 0 0 30px rgba(18, 59, 109, .3);
+	//padding: 0px 25px 25px 25px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+
+	border-top: 1px dashed rgba(0, 0, 0, .2);
+
+	h2 {
+		text-align: left;
+		margin-top: 15px;
+	}
+
+	&-box {
+		text-align: left;
+		@include row-flex;
+		justify-content: flex-start;
+
+		//margin-left: 0;
+		//margin-right: 0;
+		// text-align: center;
+	}
+
+	&-item {
+		@include col();
+		@include size(4);
+		@include size-sm(12);
+		max-width: 400px;
+		margin-bottom: 25px;
+		padding-bottom: 15px;
+		// border-bottom: 1px dashed rgba(0, 0, 0, .2);
+		transition: .5s;
+
+		@media screen and (max-width: $break_sm) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&:hover {
+
+			.news-img {
+				box-shadow: 0px 0px 25px 0px darken($color-akcent3, 15%);
+			}
+
+			.news-title {
+				color: $color-akcent;
+			}
+
+		}
+
+		& a {
+			display: block;
+			text-decoration: none;
+		}
+	}
+
+	&-img {
+		width: 100%;
+		margin-bottom: 10px;
+		box-shadow: 0px 0px 15px 0px $color-akcent3;
+		transition: .5s;
+
+	}
+
+	&-title {
+		margin-bottom: 5px;
+		margin-top: 0px;
+
+		// font-family: $font-akcent;
+		color: $color-akcent;
+		@include pix-to-rem(18px);
+		line-height: 1.25;
+		text-transform: uppercase;
+		transition: .5s;
+	}
+
+	&-date {
+		@include pix-to-rem(14px);
+		color: $color-default;
+	}
+
+	.btn {
+		position: absolute;
+		top: 11px;
+		right: 25px;
+		margin: 0;
+		padding: 15px 25px 13px;
+		letter-spacing: 1px;
+
+		@media screen and (max-width: $break_sm) {
+			position: relative;
+			top: initial;
+			right: initial;
+			display: inline-block;
+		}
+	}
+}

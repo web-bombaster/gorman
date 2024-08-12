@@ -1,0 +1,43 @@
+.btn {
+	display: inline-block;
+	margin-top: 35px;
+	padding: 16px 22px;
+
+	@include pix-to-rem(15px);
+	color: #fff;
+	font-weight: 600;
+	line-height: 1.25;
+	text-align: center;
+	text-decoration: none;
+	// text-transform: uppercase;
+
+	cursor: pointer;
+	background-color: $color-akcent;
+	box-shadow: $color-akcent 0px 0px 10px 0px;
+	border-radius: $rorder-radius;
+	transition: .5s;
+	border: 1px solid $color-akcent;
+
+	// @media screen and (max-width: $break_md) {
+	// 	font-size: 18px;
+	// }
+
+	&:hover {
+		background-color: darken($color-akcent, 2%);
+		box-shadow: #000 0px 0px 10px 0px;
+	}
+
+	&-arrow {
+		position: relative;
+		padding-left: 55px;
+
+		&:before {
+			position: absolute;
+			content: "\2192";
+			left: 15px;
+			font-weight: bold;
+			font-size: 41px;
+			line-height: 0;
+		}
+	}
+}

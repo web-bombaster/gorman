@@ -1,0 +1,27 @@
+#background_cycler {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#background_cycler .img, #background_cycler .img.active {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+#background_cycler .img.active {
+    z-index: 3;
+}

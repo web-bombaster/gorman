@@ -1,0 +1,52 @@
+.hero {
+	position: relative;
+	// text-align: center;
+	color: #fff;
+	background-color: $color-akcent;
+	background-image: url('./../img/bg-top.jpg');
+	background-size: cover;
+	background-position: center center;
+	z-index: 0;
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(#000, .75);
+	}
+
+	.wrapper {
+		position: relative;
+
+		// margin-right: 0;
+		// margin-left: 0;
+	}
+
+	&-box {
+		max-width: 600px;
+
+		@media screen and (max-width: $break_sm) {
+			max-width: 100%;
+		}
+	}
+
+	&-descr {
+		@include pix-to-rem(20px);
+		margin-bottom: 30px;
+		// line-height: 1.25;
+
+		@media screen and (max-width: $break_md) {
+			@include pix-to-rem(20px);
+			margin-bottom: 15px;
+		}
+
+		@media screen and (max-width: $break_sm) {
+			font-size: 16px;
+		}
+	}
+}

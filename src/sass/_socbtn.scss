@@ -1,0 +1,33 @@
+.socbtn {
+	&-box {
+		width: 100%;
+		margin-top: 10px;
+
+		font-size: 0;
+		line-height: 0;
+		// text-align: center;
+
+		@media screen and (max-width: $break_sm) {
+			margin-top: 15px;
+		}
+
+		footer & {
+			margin-bottom: 25px;
+		}
+	}
+
+
+
+	&-item {
+		display: inline-block !important;
+
+		& img {
+			display: block;
+			height: 30px;
+		}
+	}
+
+	&-item:not(:last-child) {
+		margin-right: 10px;
+	}
+}

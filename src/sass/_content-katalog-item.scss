@@ -1,0 +1,152 @@
+.content-katalog-item {
+	&__box {
+		display: block;
+		overflow: hidden;
+	}
+
+	&__boximg {
+		position: relative;
+		display: block;
+		z-index: 0;
+		width: 50%;
+		float: left;
+		margin-right: 25px;
+		background-color: $color-akcent3;
+		padding: 15px;
+		box-sizing: border-box;
+		text-align: center;
+
+		@media screen and (max-width: $break_sm) {
+			width: 100%;
+			float: none;
+			margin-right: 0;
+			margin-bottom: 25px;
+		}
+
+		img {
+			display: block;
+			max-width: 100%;
+			width: 100%;
+			//width: 200px;
+			margin-left: auto;
+			margin-right: auto;
+
+			box-shadow: 0px 0px 1px 0px darken($color-akcent3, 35%);
+		}
+
+		.gallery .imggallery {
+			box-shadow: 0px 0px 1px 0px darken($color-akcent3, 35%);
+		}
+
+		a {
+			display: block;
+			position: relative;
+
+			&::after {
+				position: absolute;
+				content: '';
+				display: block;
+				box-sizing: border-box;
+				width: 40px;
+				height: 40px;
+				bottom: 15px;
+				right: 15px;
+				background-color: rgba($color-akcent, 1.0);
+				background-image: url('./../img/icons/lupa-white.svg');
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: 5px solid rgba($color-akcent, 1.0);
+			}
+		}
+
+		.gallery {
+			margin-top: 5px;
+			margin-bottom: -10px;
+			margin-right: -10px;
+			margin-left: -10px;
+
+			&-item {
+				margin: 10px;
+				width: calc(20% - 20px);
+
+				@media screen and (max-width: $break_xs) {
+					width: calc(25% - 20px);
+				}
+			}
+
+			&-item a {
+				&::after {
+					width: 20px;
+					height: 20px;
+					bottom: 0;
+					right: 0;
+					border: 2px solid rgba($color-akcent, 1.0);
+				}
+			}
+		}
+	}
+
+	&__boxdescr {
+		span {
+			display: block;
+			@include pix-to-rem(16px);
+			font-weight: normal;
+			color: lighten($color-default, 20%);
+		}
+
+		hr {
+			display: block;
+			width: 100%;
+			padding-top: 25px;
+			margin-top: 0;
+			margin-bottom: 25px;
+			border: 0;
+			border-bottom: 0px solid $color-akcent;
+			overflow: hidden;
+			clear: both;
+		}
+	}
+
+	&__price {
+		@include pix-to-rem(24px);
+		font-weight: bold;
+		color: $color-default;
+
+		&-old {
+			color: $color-default;
+			text-decoration: line-through;
+			display: inline-block;
+			margin-right: 25px;
+		}
+
+		&-new {
+			color: $color-akcent;
+			display: inline-block;
+		}
+	}
+
+	&__btn {
+		margin-bottom: 35px;
+
+		.btn {
+			margin-top: 15px;
+
+			@media screen and (max-width: $break_sm) {
+				padding: 12px 20px;
+			}
+		}
+	}
+
+}
+
+.box-portfolioimg {
+	display: block;
+	background-color: $color-akcent4;
+	padding: 15px;
+	box-sizing: border-box;
+	text-align: center;
+
+	.portfolioimg {
+		max-width: 100%;
+	}
+}

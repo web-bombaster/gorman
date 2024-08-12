@@ -1,0 +1,28 @@
+.komanda-slider {
+    padding-top: 50px;
+    color: #666666;
+}
+
+.komanda-item {
+    text-align: center;
+
+    img {
+        display: block;
+        margin: 0 auto 25px;
+        border-radius: 50%;
+    }
+
+    .komanda-name {
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .komanda-descr {
+        text-transform: none;
+        font-size: 18px;
+        font-weight: normal;
+        font-style: italic;
+        margin-bottom: 35px;
+    }
+}

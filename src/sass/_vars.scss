@@ -1,0 +1,55 @@
+// Стандартные переменные для всех проектов
+
+// Шрифты
+$font-default: 'Montserrat',
+sans-serif;
+$font-akcent: 'Montserrat',
+sans-serif;
+$font-size-default: 16px;
+//$font-akcent: "Andantino script", sans-serif;
+//$font-akcent2: "Arvo", sans-serif;
+//$font-size-default: 16px;
+//$font-akcent3: "roboto-example", sans-serif;
+
+// Цвета
+$color-default: #fff; // для простого текста
+// $color-akcent: #3f668c; // оранжевый
+// $color-akcent: #274b69; // оранжевый
+$color-akcent: #6624ff; // оранжевый
+//$color-akcent: #695856; // оранжевый
+$color-akcent2: #38454f; // синий
+$color-akcent3: #0e0e0e; // светлый серый
+$color-akcent4: #b3b5d6; // серый
+$color-akcent5: #252525; // темный серый для нижней секции с контактами
+$color-akcent6: #1f1f1f; // почти черный для футера
+$color-white: #fff;
+$color-error: #e91e63;
+$color-war: #e91e63;
+$color-akcent5: #fdc000;
+
+// $blue: #01f4c6;
+
+// Фоны
+$bgcolor-01: #fff;
+$bgcolor-02: #fbfbfb;
+
+// Скругления
+$rorder-radius: 10px;
+
+
+
+// Пути для входа в libs - указать один вариант
+// $path-libs: '../../libs'; // - при верстке блоков в библиотеке
+//$path-libs: ../libs -  при верстке шаблона
+
+// Пути для подключения библиотек и вытягивания ресурсов - в стилях ./ заменить на соответствующий путь
+// $path-slick: $path-libs + '/slick-carousel/slick';
+//$path-jquery: $path-libs + '/jquery/dist';
+//$path-magnificpopup: $path-libs + '/magnific-popup/dist';
+//$path-matchHeight: $path-libs + '/matchHeight/dist';
+//$path-pagescrolltoid: $path-libs + '/page-scroll-to-id';
+
+//$path: $path-slick + '/slick.scss';
+// $path: '../../libs/slick-carousel/slick/slick.scss';
+
+// Переменные для текущего проекта

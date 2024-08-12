@@ -1,0 +1,37 @@
+.aside-right {
+	@include col();
+	@include size(3);
+	@include size-sm(12);
+	box-sizing: border-box;
+
+	form {
+		display: block;
+		margin-top: 24px;
+		margin-bottom: 30px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		max-width: 360px;
+		padding: 20px 10px;
+		box-sizing: border-box;
+		background-color: $color-akcent;
+		color: #ffffff;
+
+		@media screen and (max-width: $break_sm) {
+			margin-top: 0;
+		}
+
+		h3 {
+			color: #ffffff;
+			@include pix-to-rem(16px);
+			border: none;
+			padding-bottom: 0;
+			margin-bottom: 15px;
+		}
+
+		.polytic {
+			color: #ffffff;
+			@include pix-to-rem(12px);
+		}
+	}
+}

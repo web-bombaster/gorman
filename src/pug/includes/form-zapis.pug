@@ -1,0 +1,26 @@
+form#zayavka3.form
+	h3.text-center Записаться на прием
+
+
+	.before.name
+		input.jsFormText(name='name', type='text', value='', placeholder="Ваше имя", required="")
+
+
+	.before.phone
+		input.jsFormPhone(name='phone', type='tel', value='', placeholder="Контактный телефон", required="")
+
+	.before.mail
+		input.jsFormMail(name='mail', type='email', value='', placeholder="Ваш Email", required="")
+
+	.before.comment
+		textarea.jsFormText(name="comment", placeholder="Ваше сообщение")
+
+	//- .before
+	label.control-label.polytic(for='zayavka3-polytic')
+		input#zayavka3-polytic.polytic.jsFormCheckbox(name='soglasie', type='checkbox', value='yes', required="")
+
+		| Даю согласие на обработку моих персональных данных на условиях, указанных в
+		a(href='#') Политике конфиденциальности
+
+	//- button.btn.submit(name='submit', type='submit', disabled) Отправить
+	button.btn.submit(name='submit', type='button') Отправить

@@ -1,0 +1,45 @@
+.bookmarks {
+	//background-color: $color-akcent;
+	background-color: lighten($color-akcent, 10%);
+	background: linear-gradient(135deg, lighten($color-akcent, 15%) 0%, $color-akcent 100%);
+	padding-top: 60px;
+	padding-bottom: 30px;
+
+	&-box {
+		@include row-flex;
+		justify-content: center;
+	}
+
+	&-item {
+		position: relative;
+		margin-bottom: 30px;
+		border: 3px solid #fff;
+		@include col();
+		@include size(3);
+		@include size-md(4);
+		@include size-sm(6);
+		@include size-xs(12);
+	}
+
+	img {
+		width: 100%;
+		display: block;
+	}
+
+	&-title {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		//transform: translateY(0%);
+		padding: 10px;
+		box-sizing: border-box;
+		background-color: rgba(255, 255, 255, 0.842);
+		text-decoration: none;
+		color: $color-akcent;
+		font-weight: bold;
+		text-transform: uppercase;
+		line-height: 1.25;
+		z-index: 2;
+	}
+}

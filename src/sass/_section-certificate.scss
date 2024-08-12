@@ -1,0 +1,47 @@
+.certificate {
+	.section-header {
+		margin-bottom: 25px;
+	}
+
+	&-item {
+		position: relative;
+		box-sizing: border-box;
+		z-index: 0;
+
+		a {
+			&:hover {
+				&:before {
+					bottom: 50%;
+					right: 50%;
+					transform: translate(50%, 50%);
+					transition: .5s;
+					border-radius: 50%;
+				}
+			}
+
+			&:before {
+				position: absolute;
+				content: '';
+				width: 30px;
+				height: 30px;
+				bottom: 0;
+				right: 0;
+				transform: translate(-15px, -15px);
+				background-color: $color-akcent;
+				background-image: url('./../img/icons/lupa-white.svg');
+				background-size: 20px 20px;
+				background-position: center;
+				background-repeat: no-repeat;
+				transition: .5s;
+			}
+		}
+
+		img {
+			display: block;
+			height: 150px;
+			width: auto;
+			margin: 15px;
+			box-shadow: 0 0 30px rgba(18, 59, 109, 0.3);
+		}
+	}
+}

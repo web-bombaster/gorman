@@ -1,0 +1,37 @@
+mixin price-item(src, title, descr)
+	.price-item
+		.price-item__img
+			img(src="img/price/"+src, alt="")
+		.price-item__box
+			.price-item__title #{title}
+			.price-item__descr #{descr}
+			a.price-item__btn.btn.popup_content(href="#zayavka") Узнать больше
+
+
+
+
+section#price.price
+	.wrapper
+		h2.section-header.text-center Наши группы
+		//- .section-descr В «Little Fairies» можно заниматься с любого возраста, любого уровня подготовки, с любыми физическими данными!
+		.price-box
+
+			+price-item(
+				'01.jpg',
+				'Группа "D"',
+				'Детская Киношкола, которую будут вести опытные и при этом молодые преподаватели'
+			)
+
+			+price-item(
+				'02.jpg',
+				'Режиссёрская группа',
+				'где каждый автор сможет воплотить в жизнь свою историю и научится не только смотреть издалека, а действовать здесь и сейчас'
+			)
+
+			+price-item(
+				'03.jpg',
+				'Для абитуриентов',
+				'Мы понимаем, как важно не терять год и предлагаем каждому окунуться в профессию уже сейчас'
+			)
+
+

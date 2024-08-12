@@ -1,0 +1,29 @@
+.pechat {
+	background-color: #fff;
+
+	&-info {
+		@include col();
+		@include size(8);
+		@include size-sm(12);
+
+		@media screen and (max-width: $break_sm) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&-img {
+		@include col();
+		@include size(4);
+		@include size-sm(12);
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.section-header {
+		text-align: left;
+		color: #000;
+		margin-bottom: 25px;
+	}
+}

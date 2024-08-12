@@ -1,0 +1,32 @@
+.characteristic {
+	&-table {
+		display: table;
+		width: 100%;
+		line-height: 1.25;
+	}
+
+	&-row {
+		display: table-row;
+		transition: .5s;
+
+		&:nth-child(odd) {
+			background-color: lighten($color-akcent3, 3%);
+		}
+
+		&:hover {
+			background-color: $color-akcent3;
+		}
+	}
+
+	&-col {
+		display: table-cell;
+		padding: 15px 10px;
+
+		&.title {
+			font-weight: bold;
+		}
+
+		&.descr {
+		}
+	}
+}

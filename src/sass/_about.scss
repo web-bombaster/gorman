@@ -1,0 +1,27 @@
+.about {
+    background-color: $color-akcent5;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    text-align: center;
+    color: #ffffff;
+    @include pix-to-rem(12px);
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+.about-img {
+    // float: left;
+    margin-right: 25px;
+    width: 25%;
+
+}
+
+.about-box {
+    position: relative;
+}
+.about-img {
+    position: sticky;
+}
+.about-info {
+
+}

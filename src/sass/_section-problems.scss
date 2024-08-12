@@ -1,0 +1,42 @@
+.problems {
+	// .row {
+	// 	align-items: center;
+	// }
+
+	&-question {
+		@include col();
+		@include size(6);
+		@include size-sm(12);
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+		}
+
+		li {
+			padding: 10px 10px 5px 34px;
+			background-image: url('./../img/grust.png');
+			background-repeat: no-repeat;
+			background-position: left 7px;
+			line-height: 1.25;
+		}
+
+		p {
+			@include pix-to-rem(24px);
+			color: $color-akcent;
+			line-height: 1.25;
+		}
+	}
+
+	&-form {
+		@include col();
+		@include size(6);
+		@include size-sm(12);
+
+		.form {
+			h3 {
+				text-transform: none;
+			}
+		}
+	}
+}
