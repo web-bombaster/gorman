@@ -1,7 +1,7 @@
 // Дополнительные стили для всплывающих окон, вызванных через ajax
 
 .mfp-close-btn-in .mfp-close {
-	color: #fff;
+	color: $color-default;
 }
 
 .ajax-content {
@@ -26,6 +26,7 @@
 	max-width: 400px;
 	margin: 40px auto;
 	position: relative;
+	color: #000;
 
 	// .mfp-close {
 	// 	color: #ccc;

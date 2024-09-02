@@ -25,7 +25,7 @@ $('.portfolio-box').slick({
 	// centerMode: true,
 	variableWidth: true,
 	// fade: true,
-	dots: true,
+	dots: false,
 	slidesToScroll: 1,
 	responsive: [
 		{

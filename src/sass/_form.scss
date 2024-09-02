@@ -5,7 +5,7 @@
 	font-size: 18px;
 	line-height: 1.25;
 
-	background-color: $color-akcent;
+	background-color: $color-white;
 	background-position: center center;
 	background-size: cover;
 
@@ -35,7 +35,7 @@
 	}
 
 	a {
-		// color: #fff;
+		color: $color-akcent;
 	}
 
 	label {
@@ -56,14 +56,14 @@
 		border-radius: 6px;
 		outline: none;
 		overflow: hidden;
-		color: $color-akcent3;
+		color: $color-default;
 		font-weight: normal;
 		font-size: 16px;
 		font-family: 'Montserrat', sans-serif;
-		background-color: $color-default;
+		background-color: $color-akcent3;
 
 		&::placeholder {
-			color: lighten($color-akcent3, 30%);
+			color: lighten($color-default, 30%);
 		}
 
 		&.hidden {
@@ -131,7 +131,7 @@
 			width: 46px;
 			height: 100%;
 			content: '';
-			background-color: $color-akcent3;
+			background-color: $color-akcent;
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-size: 20px 20px;
@@ -166,10 +166,10 @@
 		}
 
 		input {
-			background-color: #fff;
+			// background-color: #fff;
 
 			&::placeholder {
-				color: $color-akcent3;
+				color: $color-error;
 			}
 		}
 
@@ -204,7 +204,7 @@
 		outline: none;
 		font-family: 'Montserrat', sans-serif;
 		// border-radius: 4px;
-		background-color: $color-akcent3;
+		background-color: $color-akcent;
 		// box-shadow: $color-akcent5 0px 0px 0px 0px;
 
 		transition: .5s;

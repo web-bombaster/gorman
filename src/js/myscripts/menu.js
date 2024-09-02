@@ -1,36 +1,51 @@
 //Мобильное меню
-var touch = $('#touch-menu'); // кнопка меню
-var menu = $('.tgnav'); // ul.tgnav - обертка меню
-var dropdown = $('.dropdown'); // li.dropdown - элемент меню, содержищий подменю
-var dropdownToggle = $('.dropdown-toggle'); // a.dropdown-toggle - кнопка с подменю
-var dropdownMenu = $('.dropdown-menu'); // div.dropdown-menu - контейнер для подменю
+var touch = $("#touch-menu"); // кнопка меню
+var menu = $(".tgnav"); // ul.tgnav - обертка меню
+var dropdown = $(".dropdown"); // li.dropdown - элемент меню, содержищий подменю
+var dropdownToggle = $(".dropdown-toggle"); // a.dropdown-toggle - кнопка с подменю
+var dropdownMenu = $(".dropdown-menu"); // div.dropdown-menu - контейнер для подменю
+var link = $(".tgnav a"); // ссылка меню
 
 // По  клику на кнопке меню показываем меню или скрываем
 // var menu = $('.tgnav'); // ul.tgnav - обертка меню
-$(touch).on('click', function(e) {
+$(touch).on("click", function (e) {
 	e.preventDefault(); // Убираем действие по умолчанию
 	$(this).parent().next(menu).stop().slideToggle(); // Следующему эл-ту с классом .tgnav даем slideToggle
 });
 
-$(window).resize(function() {
+// При клике на пункт меню убрать мобильное
+$(link).on("click", function (e) {
+	console.log('tgnav a');
+	var wid = $(window).width();
+	if (wid <= 768) {
+		menu.removeAttr("style");
+	}
+});
+
+$(window).resize(function () {
 	// возвращает видимость меню для ПК если оно было закрыто на мобильной версии
 	var wid = $(window).width();
-	if (wid > 760 && menu.is(':hidden')) {
-		menu.removeAttr('style');
+	if (wid > 768 && menu.is(":hidden")) {
+		menu.removeAttr("style");
 	}
 });
 
 // клик по кнопке с подменю
 // var dropdownToggle = $('.dropdown-toggle');
-$(dropdownToggle).on('click', function(e) {
+$(dropdownToggle).on("click", function (e) {
 	e.preventDefault();
-	if ($(this).is('.open')) {
+	if ($(this).is(".open")) {
 		// если кнопка с классом open, то прячем подменю
-		$(this).removeClass('open').next().slideToggle(300);
+		$(this).removeClass("open").next().slideToggle(300);
 	} else {
 		// если закрыто, то ищем ближайший родительский ul, в нем ищем открытые кнопки .dropdown-toggle.open , закрываем их, закрываем ранее открытые подменю
-		$(this).closest('ul').find('.dropdown-toggle.open').removeClass('open').next().slideToggle(300);
-		$(this).addClass('open').next().slideToggle(300); // Выбранной кнопке добавляем класс open, открываем подменю
+		$(this)
+			.closest("ul")
+			.find(".dropdown-toggle.open")
+			.removeClass("open")
+			.next()
+			.slideToggle(300);
+		$(this).addClass("open").next().slideToggle(300); // Выбранной кнопке добавляем класс open, открываем подменю
 	}
 });
 
@@ -61,8 +76,8 @@ $(dropdownToggle).on('click', function(e) {
 // Закрываем мобильное меню по клику вне его
 // var touch = $('#touch-menu');
 // var menu = $('.tgnav');
-$(function() {
-	$(document).click(function(e) {
+$(function () {
+	$(document).click(function (e) {
 		// событие клика по веб-документу
 		// var dropdown = $('.dropdown'); // указываем элемент
 		if (
@@ -70,7 +85,7 @@ $(function() {
 			!menu.is(e.target) && // если клик был не по меню
 			menu.has(e.target).length === 0 // и не по его дочерним элементам
 		) {
-			menu.removeAttr('style');
+			menu.removeAttr("style");
 		}
 	});
 });

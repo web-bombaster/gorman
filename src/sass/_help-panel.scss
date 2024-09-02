@@ -3,13 +3,9 @@
 	right: 0;
 	bottom: 25px;
 
-	// @media screen and (max-width: $break_sm) {
-	// 	bottom: 0px;
-	// 	left: 0;
-	// 	background-color: rgba(lighten($color-default, 72%), .8);
-	// 	text-align: center;
-	// 	line-height: 0;
-	// }
+	@media screen and (max-width: 768px) {
+		bottom: 0;
+	}
 
 	.item {
 		display: block;

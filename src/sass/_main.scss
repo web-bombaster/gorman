@@ -13,7 +13,7 @@ body,
 html {
 	// height: 100%;
 	margin: 0;
-	background-color: #000;
+	background-color: #fff;
 }
 
 body {
@@ -69,7 +69,6 @@ section {
 	width: 100%;
 	padding-top: 90px;
 	padding-bottom: 90px;
-
 }
 
 .section {
@@ -208,7 +207,7 @@ h3 {
 
 	&::before {
 		position: absolute;
-		content: '';
+		content: "";
 		width: 50px;
 		height: 1px;
 		background-color: $color-akcent;
@@ -266,4 +265,45 @@ main {
 			min-height: 300px;
 		}
 	}
+}
+.video_box {
+	position: relative;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.mfp-content__wrapper {
+	position: relative;
+	max-width: 800px;
+	margin: 20px auto;
+	background: $color-white;
+	box-shadow: 0px 0px 6px #2f2f2f;
+	border-radius: 10px;
+
+@media screen and (max-width: 480px) {
+	margin: 20px 15px;
+}
+
+}
+.get-code-window {
+	position: relative;
+	padding: 2em 3em;
+	width: auto;
+
+	@media screen and (max-width: 480px) {
+		padding: 2em 15px;
+	}
+}
+
+.white-popup-block {
+	color: #fff;
 }

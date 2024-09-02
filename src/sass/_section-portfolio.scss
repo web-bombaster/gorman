@@ -1,102 +1,102 @@
 .portfolio {
+	.slick-slide img {
+		width: auto;
+	}
 
-    .slick-slide img {
-        width: auto;
-    }
+	&-item {
+		position: relative;
+		padding: 10px;
+		box-sizing: border-box;
 
-    &-item {
-        position: relative;
-        padding: 10px;
-        box-sizing: border-box;
+		a {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			position: relative;
+			text-decoration: none;
 
-        a {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            position: relative;
-            text-decoration: none;
+			.portfolio-item__title {
+				display: flex;
+				flex-wrap: wrap;
+				word-wrap: break-word;
 
-            /*             &:before {
-                display: block;
-                position: absolute;
-                content: '';
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(#000, 0);
-                transition: .5s;
-            }
+				padding: 15px;
+				@include pix-to-rem(14px);
+				color: $color-default;
+				text-align: center;
+				text-decoration: none;
 
-            &:hover:before {
-                background-color: rgba(#000, .5);
-                transition: .5s;
-            } */
+				z-index: 5;
+				transition: 0.5s;
+			}
+		}
 
-            /* &:hover {
-                .portfolio-item__title {
-                    color: #fff;
-                }
-            } */
+		img {
+			height: 350px;
+			width: auto;
+			display: block;
+			z-index: 1;
+			box-shadow: 0px 0px 10px 0px rgb(31, 31, 31);
 
-            .portfolio-item__title {
-                display: flex;
-                // flex-direction: column;
-                flex-wrap: wrap;
-                word-wrap: break-word;
+			@media screen and (max-width: $break_sm) {
+				height: 300px;
+			}
+
+			@media screen and (max-width: $break_xs) {
+				height: 250px;
+			}
+		}
+
+		&__title {
+			display: none;
+		}
+	}
+
+    .slick-next {
+		// right: -45px;
+		background-color: $color-akcent;
+
+		@media screen and (max-width: $break_md) {
+			right: 0px;
+		}
+
+		@media screen and (max-width: 480px) {
+			top: 100%;
+			right: 50%;
+			transform: translate(110%, 50%);
+		}
 
 
-                // width: 100%;
-                padding: 15px;
-                // box-sizing: border-box;
-                // top: 50%;
-                // transform: translateY(-50%);
-                @include pix-to-rem(14px);
-                color: $color-default;
-                text-align: center;
-                text-decoration: none;
+	}
 
-                z-index: 5;
-                transition: .5s;
+	.slick-prev {
+		// left: -45px;
+		background-color: $color-akcent;
 
-            }
-        }
+		@media screen and (max-width: $break_md) {
+			left: 0px;
+		}
 
-        img {
-            height: 350px;
-            width: auto;
-            display: block;
-            z-index: 1;
-            box-shadow: 0px 0px 10px 0px rgb(31, 31, 31);
-            //border: 1px solid $text-color;
-            // border: 1px solid #151619;
+		@media screen and (max-width: 480px) {
+			top: 100%;
+			left: 50%;
+			// transform: translateY(50%);
+			transform: translate(-110%, 50%);
+		}
+	}
 
-            @media screen and (max-width: $break_sm) {
-                height: 300px;
-            }
+	.slick-dots li {
+		margin: 0 4px;
+	}
 
-            @media screen and (max-width: $break_xs) {
-                height: 250px;
-            }
-        }
+	.slick-dots li button:before {
+		font-size: 0.7rem;
+		opacity: 1;
+		color: #292626;
+	}
 
-        &__title {
-            display: none;
-        }
-    }
-
-    .slick-dots li {
-        margin: 0 4px;
-    }
-
-    .slick-dots li button:before {
-        font-size: .7rem;
-        opacity: 1;
-        color: #292626;
-    }
-
-    .slick-dots li.slick-active button:before {
-        opacity: .75;
-        color: $color-akcent;
-    }
+	.slick-dots li.slick-active button:before {
+		opacity: 0.75;
+		color: $color-akcent;
+	}
 }

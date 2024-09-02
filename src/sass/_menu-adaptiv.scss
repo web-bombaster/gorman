@@ -3,7 +3,8 @@
 /* ---------------------------------------------- */
 
 .header-menu {
-	background-color: darken($color-akcent, 10%);
+	// background-color: darken($color-akcent, 10%);
+	background-color: $color-akcent;
 	// text-align: center;
 	position: relative;
 	z-index: 1000 !important;
@@ -67,7 +68,7 @@ nav,
 			box-sizing: border-box;
 
 			@media (max-width: $break_sm) {
-				color: $color-akcent;
+				color: $color-default;
 			}
 		}
 
@@ -80,7 +81,7 @@ nav,
 			box-sizing: border-box;
 			@include pix-to-rem(15px);
 			line-height: 20px;
-			color: #fff;
+			color: $color-white;
 			font-weight: 600;
 			outline: 0;
 			cursor: pointer;
@@ -88,6 +89,8 @@ nav,
 			@media (max-width: $break_sm) {
 				padding: 10px 15px;
 				margin: 0;
+
+				color: $color-default;
 				border-bottom: 1px solid lighten($color-default, 65%);
 				// color: $color-default;
 			}

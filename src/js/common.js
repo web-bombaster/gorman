@@ -15,6 +15,6 @@ $(document).ready(function() {
 	// include './../js/myscripts/scroll-top.js'
 	// Прилипание меню
 	// -include './../js/myscripts/sticky.js'
-	// include './../js/myscripts/adaptive-table.js'
+	// -include './../js/myscripts/adaptive-table.js'
 });
 // include './myscripts/preloader.js'
